@@ -1,0 +1,381 @@
+[
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Paladin",
+    "desc": "Standing resolutely against trouble, without backing down.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Keep",
+    "desc": "Quiet, unshakeable strength that withstands any hardship.",
+    "morality": "N"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Big Sky",
+    "desc": "Momentous change, as when all the slaves of a nation are emancipated.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Forge",
+    "desc": "Strength through diversity, or strength from many sources united against a single trial.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Bear",
+    "desc": "Pure strength that cannot be truly tamed or trained.",
+    "morality": "N"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Uprising",
+    "desc": "Overwhelming strength that catches the subject up in something much more powerful.",
+    "morality": "CN"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Fiend",
+    "desc": "A devil who devours the masses of the innocent, and can represent the deaths of many in a disaster. ",
+    "morality": "LE"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Beating",
+    "desc": "An assault from all quarters, or the mental dissolution of the self.",
+    "morality": "NE"
+  },
+  {
+    "ability": "Strength",
+    "symbol": "hammer",
+    "name": "The Cyclone",
+    "desc": "An unstoppable, destructive force unleashed through the plots of intelligent creatures.",
+    "morality": "CE"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Dance",
+    "desc": "A complicated framework that requires the cooperation of all to avoid collapse.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Cricket",
+    "desc": "The grig, quick travel, and the reward at the end of a journey.",
+    "morality": "NG"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Juggler",
+    "desc": "Destiny, deities, and those who play with the fates of others.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Locksmith",
+    "desc": "The keys the subject needs to unlock his fate. The card grants the tools needed to unlock some new place, puzzle, or hoard.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Peacock",
+    "desc": "A great beauty that can only be preserved if petrified and frozen in time for eternity, as by a cockatrice's glare.",
+    "morality": "N"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Rabbit Prince",
+    "desc": "The quirky vicissitudes of melee combat. The Rabbit Prince is the personification of the capriciousness of battle, and his broken sword indicates that defeat can come to anyone. The card sometimes represents younger members of royal or noble houses.[",
+    "morality": "CN"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Avalanche",
+    "desc": "Disaster: an unthinking panic and destruction that overruns all.[",
+    "morality": "LE"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Crows",
+    "desc": "Murder, theft, and the violent loss of that which is loved.[",
+    "morality": "NE"
+  },
+  {
+    "ability": "Dexterity",
+    "symbol": "key",
+    "name": "The Demon's Lantern",
+    "desc": "An impossible situation of traps, mind tricks, and sleight of hand.[",
+    "morality": "CE"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Trumpet",
+    "desc": "An archon who dives aggressively and righteously into danger.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Survivor",
+    "desc": "A creature that has managed to survive a terrible ordeal, when everyone thought him lost.",
+    "morality": "NG"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Desert",
+    "desc": "An environment too difficult for anyone to survive without help. The sphinx may represent a source of salvation from plague.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Brass Dwarf",
+    "desc": "A creature invulnerable to a current threat.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Teamster",
+    "desc": "An external force that drives the subject on.",
+    "morality": "N"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Mountain Man",
+    "desc": "An encounter with a physical power outside of the subject's control.",
+    "morality": "CN"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Tangled Briar",
+    "desc": "A historical thing or creature that will have some influence on the question.",
+    "morality": "LE"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Sickness",
+    "desc": "Corruption, famine, plague, pestilence, and disease.",
+    "morality": "NE"
+  },
+  {
+    "ability": "Constitution",
+    "symbol": "shield",
+    "name": "The Waxworks",
+    "desc": "A place of torture, imprisonment, helplessness, and paralysis.",
+    "morality": "CE"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Hidden Truth",
+    "desc": "The discovery of the greater truth within.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Wanderer",
+    "desc": "A centaur collector who appreciates things others discard as junk.",
+    "morality": "NG"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Joke",
+    "desc": "A monster that can only be defeated through trickery, or the value of humor in circumventing difficult people.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Inquisitor",
+    "desc": "An immutable object that cannot be deceived or influenced.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Foreign Trader",
+    "desc": "Spies, merchants, and those who trade in information.",
+    "morality": "N"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Vision",
+    "desc": "Esoteric and arcane knowledge, or madness.",
+    "morality": "CN"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Rakshasa",
+    "desc": "Domination, mental control, and slavery.",
+    "morality": "LE"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Idiot",
+    "desc": "Folly, greed, blackmail, bribery, or hubris.",
+    "morality": "NE"
+  },
+  {
+    "ability": "Intelligence",
+    "symbol": "tome",
+    "name": "The Snakebite",
+    "desc": "Poison, venom, assassination, and discord.",
+    "morality": "CE"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Winged Serpent",
+    "desc": "The couatl, the bridge of understanding between the towers of knowledge and judgement.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Midwife",
+    "desc": "The enabler or conduit of new creation, information, or arrivals.",
+    "morality": "NG"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Publican",
+    "desc": "Fellowship and refuge. The cyclops is a seemingly inconsequential figure who nonetheless has relevant insight.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Queen Mother",
+    "desc": "This formian is the personification of knowledge, who is fond of the powerless, the underclass, and those who will show her obeisance.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Owl",
+    "desc": "The harsh wisdom of the natural order. The owl holds a needle that can bind life together or pick it apart.",
+    "morality": "N"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Carnival",
+    "desc": "Illusions and false dreams.",
+    "morality": "CN"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Eclipse",
+    "desc": "Loss of faith and purpose, and the subject's doubt about his abilities or prospects.",
+    "morality": "LE"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Mute Hag",
+    "desc": "The insightful hag, a purveyor of blood pacts, treacherous secrets, and discord.",
+    "morality": "NE"
+  },
+  {
+    "ability": "Wisdom",
+    "symbol": "star",
+    "name": "The Lost",
+    "desc": "The permanently insane, lost among lunatics and psychopaths in insane asylums. It is a card of emptiness.",
+    "morality": "CE"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Empty Throne",
+    "desc": "Those who are gone, or a ghost of the past that has taught important lessons.",
+    "morality": "LG"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Theater",
+    "desc": "Prophecy, with a true prophet acting a part as the puppet of the gods.",
+    "morality": "NG"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Unicorn",
+    "desc": "One who generously offers up that which is sought.",
+    "morality": "CG"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Marriage",
+    "desc": "A union of peoples, ideas, or kingdoms that might be as productive or as ruinous as the bonding of a salamander and a water weird.",
+    "morality": "LN"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Twin",
+    "desc": "Duality of purpose or identity, or indecision and fence-sitting for the subject or the entire spread.",
+    "morality": "N"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Courtesan",
+
+    "desc": "Political intrigue and the superficiality of social niceties.",
+    "morality": "CN"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Tyrant",
+    "desc": "A ruler who harms those he rules.",
+    "morality": "LE"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Betrayal",
+    "desc": "Selfishness and envy.",
+    "morality": "NE"
+  },
+  {
+    "ability": "Charisma",
+    "symbol": "crown",
+    "name": "The Liar",
+    "desc": "Destructive, treacherous love. The lamia signals obsession, star-crossed lovers, or unrequited des",
+    "morality": "CE"
+  }
+]

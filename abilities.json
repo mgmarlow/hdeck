@@ -1,0 +1,29 @@
+{
+  "Strength": {
+    "symbol": "hammer",
+    "summary": "Strength represents a creature's muscular and physical power, and its ability to fight in melee combat. In a harrowing, it more broadly symbolizes war, battle, and honor."
+  },
+  "Dexterity": {
+    "symbol": "key",
+    "summary": "Dexterity represents a creature's agility, reflexes, balance, and skill with ranged weapons. In a harrowing, it more broadly symbolizes trouble, children, and entertainment."
+  },
+  "Constitution": {
+    "symbol": "shield",
+    "summary": "Constitution represents a creature's health, stamina, and increased ability to survive injuries or disease. In a harrowing, it more broadly symbolizes health, the home, and pain."
+  },
+  "Intelligence": {
+    "name": "Intelligence",
+    "symbol": "tome",
+    "summary": "Intelligence represents a creature's ability to learn and reason, and can indicate facility with languages or arcane magic. In a harrowing, it more broadly symbolizes money, school, and literature."
+  },
+  "Wisdom": {
+    "name": "Wisdom",
+    "symbol": "star",
+    "summary": "Wisdom represents a creature's willpower, common sense, awareness, intuition, and perception, and can indicate facility with divine magic. In a harrowing, it more broadly symbolizes ancient history, morality, and the gods."
+  },
+  "Charisma": {
+    "name": "Charisma",
+    "symbol": "crown",
+    "summary": "Charisma represents a creature's personality, personal magnetism, ability to lead, and appearance, and can indicate facility with spontaneously cast magic. In a harrowing, it more broadly symbolizes love, family, and politics."
+  }
+}
