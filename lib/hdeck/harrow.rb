@@ -9,7 +9,7 @@ module HDeck
 
     Card = Struct.new(:name, :desc, :morality)
     def cards
-      @cards || @cards = card_data.map do |card_data|
+      @cards ||= card_data.map do |card_data|
         Card.new(card_data["name"], card_data["desc"], card_data["morality"])
       end
     end
