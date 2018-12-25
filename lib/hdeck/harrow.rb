@@ -15,10 +15,11 @@ module HDeck
       @ability_data = JSON.parse(File.read('abilities.json'))
     end
 
-    Card = Struct.new(:name, :desc, :morality)
     def cards
       @cards ||= card_data.map do |card_data|
-        Card.new(card_data["name"], card_data["desc"], card_data["morality"])
+        Card.new(name: card_data["name"],
+                 desc: card_data["desc"],
+                 morality: card_data["morality"])
       end
     end
 
@@ -26,7 +27,25 @@ module HDeck
       playing_card_hash[playing_card]
     end
 
+    def draw(n)
+      shuffled_cards = shuffle
+      shuffled_cards.first(n)
+    end
+
     private
+
+    def shuffle
+      cp = cards.map(&:clone)
+      counter = cp.length - 1
+
+      while counter > 0
+        ri = rand(counter)
+        cp[counter], cp[ri] = cp[ri], cp[counter]
+        counter -= 1
+      end
+
+      cp
+    end
 
     def playing_card_hash
       return @playing_card_hash unless @playing_card_hash.nil?

@@ -4,13 +4,13 @@ require_relative '../lib/hdeck'
 
 harrow = HDeck::Harrow.new
 
-playing_card = ARGV[0].upcase
-if !HDeck::Harrow::PLAYING_CARDS.include?(playing_card)
-  puts "Invalid card.\nUsage: <value><suit>.\nFor example, 'hdeck JH' for Jack of Hearts."
-  return
+if HDeck::Harrow::PLAYING_CARDS.include?(ARGV[0])
+  selected_card = harrow.convert_from_playing_card(ARGV[0].upcase)
+  puts selected_card.to_s
+else
+  hand = harrow.draw(ARGV[0].to_i > 0 ? ARGV[0].to_i : 1)
+  hand.each do |card|
+    puts
+    puts card.to_s
+  end
 end
-
-selected_card = harrow.convert_from_playing_card(ARGV[0])
-puts "Name: #{selected_card.name}"
-puts "Description: #{selected_card.desc}"
-puts "Morality: #{selected_card.morality}"
