@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/hdeck'
+
+harrow = HDeck::Harrow.new
+
+playing_card = ARGV[0].upcase
+if !HDeck::Harrow::PLAYING_CARDS.include?(playing_card)
+  puts "Invalid card.\nUsage: <value><suit>.\nFor example, 'hdeck JH' for Jack of Hearts."
+  return
+end
+
+selected_card = harrow.convert_from_playing_card(ARGV[0])
+puts "Name: #{selected_card.name}"
+puts "Description: #{selected_card.desc}"
+puts "Morality: #{selected_card.morality}"

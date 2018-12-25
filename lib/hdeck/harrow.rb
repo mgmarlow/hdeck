@@ -26,14 +26,6 @@ module HDeck
       playing_card_hash[playing_card]
     end
 
-    # TODOS
-
-    def shuffle_deck
-    end
-
-    def draw(n)
-    end
-
     private
 
     def playing_card_hash
@@ -42,7 +34,7 @@ module HDeck
       hash = {}
 
       cards.sort_by(&:name).each.with_index do |card, i|
-        hash[PLAYING_CARDS[i]] = card[:name]
+        hash[PLAYING_CARDS[i]] = card
       end
 
       @playing_card_hash = hash
