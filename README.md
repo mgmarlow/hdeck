@@ -26,7 +26,7 @@ $deck.shuffle
 $deck.draw(1)
 # => "(CG) The Juggler"
 
-$deck.draw(1, replace: false)
+$deck.draw(1, replace: false, shuffle: false)
 # => "(CG) The Juggler"
 $deck.length
 # => 53
