@@ -2,9 +2,13 @@ module Harrow
   class Deck
     include Enumerable
 
-    def initialize
+    attr_accessor :alignment
+
+    def initialize(alignment: "CN")
       card_data = JSON.parse(File.read('cards.json'))
+      @alignment = alignment
       @cards = get_cards(card_data)
+      shuffle
     end
 
     def length
@@ -15,12 +19,43 @@ module Harrow
       @cards.each(&block)
     end
 
-    def draw(n, replace: true)
-      if replace
-        @cards.last(n)
+    def draw(shuffle_before: true, replace: true)
+      shuffle if shuffle_before
+      drawn_card = if replace
+        @cards.last
       else
-        @cards.pop(n)
+        @cards.pop
       end
+
+      # Bonuses applied via Role Dealer feat
+      case detect_alignment_match(drawn_card)
+      when :full
+        puts "Full alignment match\n"\
+              "--------------------\n"\
+              "crit range: 19-20\n"\
+              "crit damage bonus: x3\n"\
+              "+4 bonus to confirmation roll\n"
+      when :partial
+        puts "Partial alignment match\n"\
+              "--------------------\n"\
+              "crit range: 19-20"
+      end
+
+      drawn_card.to_s
+    end
+
+    def detect_alignment_match(card)
+      if card.morality == @alignment
+        return :full
+      end
+
+      @alignment.each_char do |sign|
+        if card.morality.include?(sign)
+          return :partial
+        end
+      end
+
+      :none
     end
 
     def shuffle
@@ -43,7 +78,7 @@ module Harrow
           name: card_data["name"],
           desc: card_data["desc"],
           morality: card_data["morality"]
-        ).to_s
+        )
       end
     end
   end
