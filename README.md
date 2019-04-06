@@ -4,10 +4,9 @@ CLI tool to manage decks of [harrow cards](http://pathfinder.wikia.com/wiki/List
 
 ## Example
 
-```
-# Begin the pry session
-./bin/console
+Begin a pry session by running the console: `./bin/console`.
 
+```ruby
 deck = Harrow::Deck.new
 deck.draw(1)
 # => "(LG) The Paladin"
