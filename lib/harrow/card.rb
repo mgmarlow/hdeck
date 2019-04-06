@@ -1,4 +1,4 @@
-module HDeck
+module Harrow
   class Card
     attr_accessor :name, :desc, :morality
 
@@ -9,7 +9,7 @@ module HDeck
     end
 
     def to_s
-      "#{name} (#{morality})\n#{desc}"
+      "(#{morality}) #{name}"
     end
   end
 end
