@@ -15,20 +15,21 @@ Begin a pry session by running the console:
 ./bin/console
 ```
 
-Use `$deck` to manage your deck for a Pathfinder session. New
+Use `$player` to manage your Card Caster for a Pathfinder session. New
 decks can be created by calling `Harrow::Deck.new`.
 
 ```ruby
-$deck.draw(1)
+$player.draw_card
 # => "(LG) The Paladin"
 
-$deck.shuffle
-$deck.draw(1)
+# Cards are automatically shuffled before they're drawn
+$player.draw_card
 # => "(CG) The Juggler"
 
-$deck.draw(1, replace: false, shuffle: false)
+# This can be turned off by specifying shuffle_before: false
+$player.draw_card(shuffle_before: false)
 # => "(CG) The Juggler"
-$deck.length
+$player.deck.length
 # => 53
 ```
 
@@ -39,7 +40,7 @@ Dealer feat.
 
 ```ruby
 # Alignment is chaotic neutral by default
-$deck.draw(1)
+$player.draw_card
 # Full alignment match
 # --------------------
 # crit range: 19-20
@@ -48,5 +49,5 @@ $deck.draw(1)
 # => "(CN) The Rabbit Prince"
 
 # Change alignment by using the setter
-$deck.alignment = "CG"
+$player.alignment = "CG"
 ```
