@@ -6,7 +6,6 @@ module Harrow
     def initialize
       card_data = JSON.parse(File.read('cards.json'))
       @cards = get_cards(card_data)
-      shuffle
     end
 
     def length

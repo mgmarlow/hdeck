@@ -1,5 +1,3 @@
-require 'harrow'
-
 RSpec.describe Harrow::Card do
   let(:name)     { 'Test' }
   let(:desc)     { 'A test desc' }
