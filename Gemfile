@@ -1,8 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-group :development do
-  gem 'rake'
-  gem 'rspec'
-  gem 'thor'
-  gem 'rubocop', require: false
-end
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# Specify your gem's dependencies in hdeck.gemspec
+gemspec
