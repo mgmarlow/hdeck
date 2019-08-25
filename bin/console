@@ -1,8 +1,33 @@
 #!/usr/bin/env ruby
 
+require 'thor'
 require_relative '../lib/harrow'
 
-$player = Harrow::CardCaster.new
+class CLI < Thor
+  package_name "hdeck"
 
-require 'pry'
-Pry.start
+  desc "new", "create a new harrow deck"
+  option :alignment, default: 'CN'
+  def new()
+    puts 'Creating a new Harrow Deck.'
+    # TODO: validate alignment
+    player = Harrow::CardCaster.new(alignment: options[:alignment])
+    active = true
+
+    while active do
+      action = ask("What would you like to do? (draw) (throw) (quit)\n")
+
+      if action == 'draw'
+        player.draw_card(shuffle_before: true, replace: true)
+      elsif action == 'throw'
+        player.draw_card(shuffle_before: true, replace: false, calculate_match: true)
+      elsif action == 'quit' || action == 'q'
+        active = false
+      else
+        puts 'did not recognize command'
+      end
+    end
+  end
+end
+
+CLI.start(ARGV)

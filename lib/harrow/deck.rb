@@ -39,7 +39,8 @@ module Harrow
         Card.new(
           name: data['name'],
           desc: data['desc'],
-          morality: data['morality']
+          morality: data['morality'],
+          ability: data['ability']
         )
       end
     end

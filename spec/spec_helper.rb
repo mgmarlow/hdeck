@@ -13,7 +13,6 @@
 # it.
 #
 
-require 'pry'
 require 'harrow'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

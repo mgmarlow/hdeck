@@ -8,7 +8,8 @@ RSpec.describe Harrow::CardCaster do
       Harrow::Card.new(
         name: 'Test',
         desc: 'A test desc',
-        morality: 'LG'
+        morality: 'LG',
+        ability: 'Dexterity'
       )
     end
 

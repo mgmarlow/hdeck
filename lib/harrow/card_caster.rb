@@ -8,7 +8,7 @@ module Harrow
       @deck = Deck.new
     end
 
-    def draw_card(shuffle_before: true, replace: false)
+    def draw_card(shuffle_before: true, replace: false, calculate_match: false)
       if deck.length <= 0
         puts 'Deck is out of cards'
         return
@@ -17,21 +17,24 @@ module Harrow
       deck.shuffle if shuffle_before
 
       drawn_card = deck.draw(replace: replace)
-      # Bonuses applied via Role Dealer feat
-      case detect_alignment_match(drawn_card)
-      when :full
-        puts "Full alignment match\n"\
-              "--------------------\n"\
-              "crit range: 19-20\n"\
-              "crit damage bonus: x3\n"\
-              "+4 bonus to confirmation roll\n"
-      when :partial
-        puts "Partial alignment match\n"\
-              "--------------------\n"\
-              "crit range: 19-20\n"
+
+      if calculate_match
+        # Bonuses applied via Role Dealer feat
+        case detect_alignment_match(drawn_card)
+        when :full
+          puts "Full alignment match!\n"\
+                "--------------------\n"\
+                "crit range: 19-20\n"\
+                "crit damage bonus: x3\n"\
+                "+4 bonus to confirmation roll\n"
+        when :partial
+          puts "Partial alignment match!\n"\
+                "--------------------\n"\
+                "crit range: 19-20\n"
+        end
       end
 
-      drawn_card.to_s
+      puts("\n#{drawn_card.to_s}\n\n")
     end
 
     def detect_alignment_match(card)

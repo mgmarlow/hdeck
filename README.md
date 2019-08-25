@@ -11,45 +11,28 @@ class easier.
 
 ### General Use
 
-Begin a pry session by running the console:
+Begin the CLI by running the console:
 
 ```
-./bin/console
+./bin/console new
 ```
 
-Use `$player` to manage your Card Caster for a Pathfinder session. New
-decks can be created by calling `Harrow::Deck.new`.
+Follow the commands to manage your harrow deck.
 
-```ruby
-$player.draw_card
-# => "(LG) The Paladin"
+```
+What would you like to do? (draw) (throw) (quit)
+ draw
 
-# Cards are automatically shuffled before they're drawn
-$player.draw_card
-# => "(CG) The Juggler"
-
-# This can be turned off by specifying shuffle_before: false
-$player.draw_card(shuffle_before: false)
-# => "(CG) The Juggler"
-$player.deck.length
-# => 53
+(Wisdom: LE) The Eclipse
+Loss of faith and purpose, and the subject's doubt about his abilities or prospects.
 ```
 
 ### Alignment (Role Dealer)
 
 Alignment can also be factored in to take advantage of the Role
-Dealer feat.
+Dealer feat. You can configure alignment with the `--alignment`
+flag. Defaults to CN.
 
-```ruby
-# Alignment is chaotic neutral by default
-$player.draw_card
-# Full alignment match
-# --------------------
-# crit range: 19-20
-# crit damage bonus: x3
-# +4 bonus to confirmation roll
-# => "(CN) The Rabbit Prince"
-
-# Change alignment by using the setter
-$player.alignment = "CG"
+```
+./bin/console new --alignment LG
 ```

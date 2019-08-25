@@ -23,7 +23,7 @@ RSpec.describe Harrow::Deck do
       let(:replace) { true }
 
       it 'returns card from the bottom of the deck without affecting length' do
-        expect(deck.draw(replace: replace).to_s).to eq('(CE) The Liar')
+        expect(deck.draw(replace: replace).to_s).to eq("(Charisma: CE) The Liar\nDestructive, treacherous love. The lamia signals obsession, star-crossed lovers, or unrequited desire.")
         expect(deck.length).to eq(54)
       end
     end
@@ -32,7 +32,7 @@ RSpec.describe Harrow::Deck do
       let(:replace) { false }
 
       it 'returns card from the bottom of the deck while affecting length' do
-        expect(deck.draw(replace: replace).to_s).to eq('(CE) The Liar')
+        expect(deck.draw(replace: replace).to_s).to eq("(Charisma: CE) The Liar\nDestructive, treacherous love. The lamia signals obsession, star-crossed lovers, or unrequited desire.")
         expect(deck.length).to eq(53)
       end
     end
