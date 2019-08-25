@@ -1,4 +1,4 @@
-module Harrow
+module HDeck
   # Manager class for Card Caster
   class CardCaster
     attr_accessor :alignment, :deck

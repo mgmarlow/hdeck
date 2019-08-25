@@ -1,11 +1,11 @@
-RSpec.describe Harrow::CardCaster do
+RSpec.describe HDeck::CardCaster do
   let(:alignment) {}
 
   subject(:card_caster) { described_class.new(alignment: alignment) }
 
   describe '#detect_alignment_match' do
     let(:card) do
-      Harrow::Card.new(
+      HDeck::Card.new(
         name: 'Test',
         desc: 'A test desc',
         morality: 'LG',

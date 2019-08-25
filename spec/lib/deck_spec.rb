@@ -1,4 +1,4 @@
-RSpec.describe Harrow::Deck do
+RSpec.describe HDeck::Deck do
   subject(:deck) { described_class.new }
 
   describe '#length' do

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'thor'
-require_relative '../lib/harrow'
+require_relative '../lib/hdeck'
 
 class CLI < Thor
   package_name "hdeck"
@@ -11,7 +11,7 @@ class CLI < Thor
   def new()
     puts 'Creating a new Harrow Deck.'
     # TODO: validate alignment
-    player = Harrow::CardCaster.new(alignment: options[:alignment])
+    player = HDeck::CardCaster.new(alignment: options[:alignment])
     active = true
 
     while active do

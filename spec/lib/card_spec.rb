@@ -1,4 +1,4 @@
-RSpec.describe Harrow::Card do
+RSpec.describe HDeck::Card do
   let(:name)     { 'Test' }
   let(:desc)     { 'A test desc' }
   let(:morality) { 'N' }

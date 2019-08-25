@@ -1,4 +1,4 @@
-module Harrow
+module HDeck
   # Provides a Harrow deck for a Card Caster to interact with
   class Deck
     include Enumerable
