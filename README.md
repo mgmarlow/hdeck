@@ -1,6 +1,7 @@
 # HDeck
 
 [![Build Status](https://travis-ci.org/mgmarlow/hdeck.svg?branch=master)](https://travis-ci.org/mgmarlow/hdeck)
+[![Gem Version](https://badge.fury.io/rb/hdeck.svg)](https://badge.fury.io/rb/hdeck)
 
 CLI tool to manage decks of [harrow cards](http://pathfinder.wikia.com/wiki/List_of_harrow_cards).
 Designed to make working with the
@@ -9,13 +10,8 @@ class easier.
 
 ## Installation
 
-Gem coming soon. For now,
-
 ```
-git clone https://github.com/mgmarlow/hdeck.git
-cd hdeck
-bundle
-./bin/console new
+gem install hdeck
 ```
 
 ## Examples
@@ -25,7 +21,7 @@ bundle
 Begin the CLI by running the console:
 
 ```
-./bin/console new
+hdeck new
 ```
 
 Follow the commands to manage your harrow deck.
@@ -45,7 +41,7 @@ Dealer feat. You can configure alignment with the `--alignment`
 flag. Defaults to CN.
 
 ```
-./bin/console new --alignment LG
+hdeck new --alignment LG
 ```
 
 ## Roadmap
