@@ -13,7 +13,7 @@
 # it.
 #
 
-require 'harrow'
+require 'hdeck'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
