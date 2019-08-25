@@ -47,3 +47,11 @@ flag. Defaults to CN.
 ```
 ./bin/console new --alignment LG
 ```
+
+## Roadmap
+
+- [ ] Better CLI formatting
+- [ ] Better error handling
+- [ ] Save & Load decks
+- [ ] More deck management options (# cards, shuffling)
+- [ ] Publish gem
