@@ -7,6 +7,17 @@ Designed to make working with the
 [Card Caster archetype](https://www.d20pfsrd.com/classes/base-classes/magus/archetypes/paizo-magus-archetypes/card-caster-magus-archetype/)
 class easier.
 
+## Installation
+
+Gem coming soon. For now,
+
+```
+git clone https://github.com/mgmarlow/hdeck.git
+cd hdeck
+bundle
+./bin/console new
+```
+
 ## Examples
 
 ### General Use
