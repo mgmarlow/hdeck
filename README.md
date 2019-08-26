@@ -46,8 +46,9 @@ hdeck new --alignment LG
 
 ## Roadmap
 
+- [x] Publish gem
 - [ ] Better CLI formatting
 - [ ] Better error handling
 - [ ] Save & Load decks
 - [ ] More deck management options (# cards, shuffling)
-- [ ] Publish gem
+
