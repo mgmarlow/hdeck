@@ -8,19 +8,24 @@ module HDeck
       @deck = Deck.new
     end
 
-    def draw_card(shuffle_before: true, replace: false, calculate_match: false)
-      if deck.length <= 0
-        puts 'Deck is out of cards'
-        return
+    def draw_card(amount: 1)
+      copy = deck.clone
+
+      (0...amount).each do |_|
+        card = copy.draw
+        return if card.nil?
+
+        puts "\n#{card.to_s}\n\n"
       end
+    end
 
-      deck.shuffle if shuffle_before
+    def throw_card(amount: 1)
+      (0...amount).each do |_|
+        card = deck.draw
+        return if card.nil?
 
-      drawn_card = deck.draw(replace: replace)
-
-      if calculate_match
         # Bonuses applied via Role Dealer feat
-        case detect_alignment_match(drawn_card)
+        case detect_alignment_match(card)
         when :full
           puts "Full alignment match!\n"\
                 "--------------------\n"\
@@ -32,9 +37,9 @@ module HDeck
                 "--------------------\n"\
                 "crit range: 19-20\n"
         end
-      end
 
-      puts("\n#{drawn_card.to_s}\n\n")
+        puts "\n#{card.to_s}\n\n"
+      end
     end
 
     def detect_alignment_match(card)

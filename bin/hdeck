@@ -18,32 +18,47 @@ class CLI < Thor
   end
 
   desc "draw", "draw from harrow deck (with replacement)"
+  option :n, default: 1, desc: 'draw amount', type: :numeric
   def draw
-    store = YAML::Store.new 'hdeck.store'
-    player = store.transaction { store[:player] }
-    player.draw_card(shuffle_before: true, replace: true)
+    player = get_player
+    player.draw_card(amount: options[:n])
   end
 
   desc "throw", "throw card from harrow deck (no replacement)"
+  option :n, default: 1, desc: 'throw amount', type: :numeric
   def throw
-    store = YAML::Store.new 'hdeck.store'
-    player = store.transaction { store[:player] }
-    player.draw_card(
-      shuffle_before: true,
-      replace: false,
-      calculate_match: true
-    )
-
-    store.transaction do
-      store[:player] = player
-    end
+    player = get_player
+    player.throw_card(amount: options[:n])
+    save(player)
   end
 
   desc "length", "number of cards left in the deck"
   def length
-    store = YAML::Store.new 'hdeck.store'
-    player = store.transaction { store[:player] }
+    player = get_player
     puts player.deck.length
+  end
+
+  desc "shuffle", "shuffle the active harrow deck"
+  def shuffle
+    player = get_player
+    player.deck.shuffle
+    puts "Shuffled #{player.deck.length} cards."
+    save(player)
+  end
+
+  no_commands do
+    # TODO: Clean up store instantiation pattern
+    def get_player
+      store = YAML::Store.new 'hdeck.store'
+      store.transaction { store[:player] }
+    end
+
+    def save(player)
+      store = YAML::Store.new 'hdeck.store'
+      store.transaction do
+        store[:player] = player
+      end
+    end
   end
 end
 

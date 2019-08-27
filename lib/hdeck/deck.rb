@@ -1,6 +1,7 @@
 module HDeck
   # Provides a Harrow deck for a Card Caster to interact with
   class Deck
+    class OutOfCardsError < StandardError; end
     include Enumerable
 
     def initialize
@@ -16,8 +17,13 @@ module HDeck
       @cards.each(&block)
     end
 
-    def draw(replace: true)
-      replace ? @cards.last : @cards.pop
+    def draw
+      if @cards.length <= 0
+        puts "Out of cards. Create a new deck with 'hdeck new'"
+        return
+      end
+
+      @cards.shift
     end
 
     def shuffle
