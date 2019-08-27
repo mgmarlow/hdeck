@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require_relative 'hdeck/version'
 require_relative 'hdeck/card_caster'

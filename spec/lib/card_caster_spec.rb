@@ -1,7 +1,23 @@
+# frozen_string_literal: true
+
 RSpec.describe HDeck::CardCaster do
-  let(:alignment) {}
+  let(:alignment) { 'CN' }
 
   subject(:card_caster) { described_class.new(alignment: alignment) }
+
+  describe '#draw_card' do
+    it 'should not affect deck length' do
+      card_caster.draw_card
+      expect(card_caster.deck.length).to eq(54)
+    end
+  end
+
+  describe '#throw_card' do
+    it 'should affect deck length' do
+      card_caster.throw_card
+      expect(card_caster.deck.length).to eq(53)
+    end
+  end
 
   describe '#detect_alignment_match' do
     let(:card) do

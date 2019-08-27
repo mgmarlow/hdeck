@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe HDeck::Card do
   let(:name)     { 'Test' }
   let(:desc)     { 'A test desc' }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HDeck
   # Manager class for Card Caster
   class CardCaster
@@ -9,20 +11,26 @@ module HDeck
     end
 
     def draw_card(amount: 1)
-      copy = deck.clone
+      copy = Marshal.load(Marshal.dump(deck))
 
       (0...amount).each do |_|
         card = copy.draw
-        return if card.nil?
+        if card.nil?
+          puts "Out of cards. Create a new deck with 'hdeck new'"
+          return
+        end
 
-        puts "\n#{card.to_s}\n\n"
+        puts "\n#{card}\n\n"
       end
     end
 
     def throw_card(amount: 1)
       (0...amount).each do |_|
         card = deck.draw
-        return if card.nil?
+        if card.nil?
+          puts "Out of cards. Create a new deck with 'hdeck new'"
+          return
+        end
 
         # Bonuses applied via Role Dealer feat
         case detect_alignment_match(card)
@@ -38,7 +46,7 @@ module HDeck
                 "crit range: 19-20\n"
         end
 
-        puts "\n#{card.to_s}\n\n"
+        puts "\n#{card}\n\n"
       end
     end
 

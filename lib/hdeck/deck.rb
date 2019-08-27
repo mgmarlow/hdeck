@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HDeck
   # Provides a Harrow deck for a Card Caster to interact with
   class Deck
@@ -18,10 +20,7 @@ module HDeck
     end
 
     def draw
-      if @cards.length <= 0
-        puts "Out of cards. Create a new deck with 'hdeck new'"
-        return
-      end
+      return if @cards.length <= 0
 
       @cards.shift
     end

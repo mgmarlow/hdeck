@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HDeck
   # An individual Harrow card unit, described on this page:
   # https://pathfinder.fandom.com/wiki/List_of_harrow_cards
