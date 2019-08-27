@@ -70,7 +70,9 @@ hdeck commands:
 ## Roadmap
 
 - [x] Publish gem
-- [ ] Better CLI formatting
-- [ ] Better error handling
 - [x] Save & Load decks
 - [x] More deck management options (# cards, shuffling)
+- [ ] Better CLI formatting
+- [ ] Better error handling
+- [ ] Harrow reading support
+
