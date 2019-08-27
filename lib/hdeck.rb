@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'json'
-require_relative 'hdeck/version'
-require_relative 'hdeck/card_caster'
-require_relative 'hdeck/card'
-require_relative 'hdeck/deck'
+require 'hdeck/version'
+require 'hdeck/card_caster'
+require 'hdeck/card'
+require 'hdeck/deck'
 
 module HDeck
   class Error < StandardError; end

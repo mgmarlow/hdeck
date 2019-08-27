@@ -7,7 +7,8 @@ module HDeck
     include Enumerable
 
     def initialize
-      card_data = JSON.parse(File.read('cards.json'))
+      card_path = File.expand_path('../../cards.json', File.dirname(__FILE__))
+      card_data = JSON.parse(File.read(card_path))
       @cards = get_cards(card_data)
     end
 

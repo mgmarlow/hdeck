@@ -1,19 +1,22 @@
 #!/usr/bin/env ruby
 
+require 'bundler/setup'
 require 'thor'
 require 'yaml/store'
-require_relative '../lib/hdeck'
+require 'hdeck'
 
 class CLI < Thor
   package_name "hdeck"
 
+  # TODO: Make this nonsesnse relative to gem's directory
   desc "new", "create a new harrow deck"
   option :alignment, default: 'CN'
   def new
-    store = YAML::Store.new 'hdeck.store'
+    store = YAML::Store.new pathname
+    player = HDeck::CardCaster.new(alignment: options[:alignment])
 
     store.transaction do
-      store[:player] = HDeck::CardCaster.new(alignment: options[:alignment])
+      store[:player] = player
     end
   end
 
@@ -47,14 +50,18 @@ class CLI < Thor
   end
 
   no_commands do
+    def pathname
+      File.join(File.dirname(__FILE__), 'hdeck.store')
+    end
+
     # TODO: Clean up store instantiation pattern
     def get_player
-      store = YAML::Store.new 'hdeck.store'
+      store = YAML::Store.new pathname
       store.transaction { store[:player] }
     end
 
     def save(player)
-      store = YAML::Store.new 'hdeck.store'
+      store = YAML::Store.new pathname
       store.transaction do
         store[:player] = player
       end

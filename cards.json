@@ -108,21 +108,21 @@
     "ability": "Dexterity",
     "symbol": "key",
     "name": "The Avalanche",
-    "desc": "Disaster: an unthinking panic and destruction that overruns all.[",
+    "desc": "Disaster: an unthinking panic and destruction that overruns all.",
     "morality": "LE"
   },
   {
     "ability": "Dexterity",
     "symbol": "key",
     "name": "The Crows",
-    "desc": "Murder, theft, and the violent loss of that which is loved.[",
+    "desc": "Murder, theft, and the violent loss of that which is loved.",
     "morality": "NE"
   },
   {
     "ability": "Dexterity",
     "symbol": "key",
     "name": "The Demon's Lantern",
-    "desc": "An impossible situation of traps, mind tricks, and sleight of hand.[",
+    "desc": "An impossible situation of traps, mind tricks, and sleight of hand.",
     "morality": "CE"
   },
   {
