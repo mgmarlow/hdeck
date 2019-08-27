@@ -18,20 +18,21 @@ gem install hdeck
 
 ### General Use
 
-Begin the CLI by running the console:
-
-```
+```sh
 hdeck new
-```
+hdeck shuffle
+hdeck draw -n 3
 
-Follow the commands to manage your harrow deck.
+# Outputs:
 
-```
-What would you like to do? (draw) (throw) (quit)
- draw
+# (Strength: N) The Keep
+# Quiet, unshakeable strength that withstands any hardship.
 
-(Wisdom: LE) The Eclipse
-Loss of faith and purpose, and the subject's doubt about his abilities or prospects.
+# (Intelligence: CE) The Snakebite
+# Poison, venom, assassination, and discord.
+
+# (Wisdom: CG) The Publican
+# Fellowship and refuge. The cyclops is a seemingly inconsequential figure who nonetheless has relevant insight.
 ```
 
 ### Alignment (Role Dealer)
@@ -42,6 +43,28 @@ flag. Defaults to CN.
 
 ```
 hdeck new --alignment LG
+hdeck throw
+
+Full alignment match!
+--------------------
+crit range: 19-20
+crit damage bonus: x3
++4 bonus to confirmation roll
+
+(Strength: LG) The Paladin
+Standing resolutely against trouble, without backing down.
+```
+
+## API
+
+```
+hdeck commands:
+  hdeck draw            # draw from harrow deck (with replacement)
+  hdeck help [COMMAND]  # Describe available commands or one specific command
+  hdeck length          # number of cards left in the deck
+  hdeck new             # create a new harrow deck
+  hdeck shuffle         # shuffle the active harrow deck
+  hdeck throw           # throw card from harrow deck (no replacement)
 ```
 
 ## Roadmap
@@ -49,6 +72,5 @@ hdeck new --alignment LG
 - [x] Publish gem
 - [ ] Better CLI formatting
 - [ ] Better error handling
-- [ ] Save & Load decks
-- [ ] More deck management options (# cards, shuffling)
-
+- [x] Save & Load decks
+- [x] More deck management options (# cards, shuffling)

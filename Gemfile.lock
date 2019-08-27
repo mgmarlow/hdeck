@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hdeck (1.0.0)
+    hdeck (1.0.1)
       thor
 
 GEM
